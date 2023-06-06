@@ -10,6 +10,29 @@
     <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
 <!-- Style -->
     <style>
+        p {
+            font-size: max(1dvw, .8rem);
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-block: 2rem 1rem;
+        }
+        h3 {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #C93B16;
+            margin-block: 2rem 1rem;
+        }
+        .red {
+            color: #C93B16;
+        }
+        .Gray {
+            color: #323232;
+        }
+        .bold {
+            font-weight: bold;
+        }
         .link {
             color: #1F16C9;
             border-bottom: 1px solid #1F16C9;
@@ -41,25 +64,25 @@
 <body style="display: grid; justify-items: center; padding-top: 2rem; padding-inline: 1rem; line-height: 1.5;">
     <div style="display: grid; width: fit-content;">
         <section>
-            <p style="font-weight: bold;">【Brand】迷ったらこれ！メガネで日常に彩りを。</p>
+            <p class="bold" style="font-size: 1rem;">【Brand】迷ったらこれ！メガネで日常に彩りを。</p>
             <div style="width: fit-content;">
                 <div style="display: flex; justify-content: space-between;">
-                    <h1 style="font-size: 3rem; font-weight: bold; color: #C93B16; margin-block: 2rem 1rem;">Brand</h1>
-                    <h3 style="font-size: 1rem; font-weight: bold; color: #C93B16; margin-block: 2rem 1rem; align-self: center;">Mail News<span style="display: block;">2023.6.3</span></h3>
+                    <h1 class="red">Brand</h1>
+                    <h3 class="red" style="align-self: center;">Mail News<span style="display: block;">2023.6.3</span></h3>
                 </div>
                 <img src="images/post1.jpg" alt="今月の新作メガネ" style="width: max(30dvw, 330px)">
             </div>
-            <p style="margin-block: 3rem 2rem; font-weight: bold;">迷ったらこれ！メガネで日常に彩りを。</p>
+            <p class="bold" style="margin-block: 3rem 2rem; font-size: 1rem;">迷ったらこれ！メガネで日常に彩りを。</p>
             <a href="リンク" style="width: fit-content; justify-self: center;"><button>詳細はこちら</button></a>
         </section>
     
         <!-- ピックアップ記事 -->
         <section id="sectionContainer">
-            <h1 style="font-size: 3rem; font-weight: bold; color: #323232; margin-block: 2rem 1rem; border-top: 1px solid #323232; width: 100%; display: inline-block;">PICK UP</h1>
+            <h1 class="gray" style="border-top: 1px solid #323232; width: 100%; display: inline-block;">PICK UP</h1>
             <!-- ここに記事が入ります -->
         </section>
 
-        <section style="margin-block: 2rem;">
+        <section style="margin-block: 2rem; display: flex; flex-direction: column; gap: .5em;">
             <p>※このメールは送信専用メールアドレスから配信しておりますので、お問い合わせを頂いてもお答え致しかねます。あらかじめご了承ください。</p>
             <p>※このメールに心当たりのない場合やご不明な点がある場合は、<a href="リンク" class="link">support@brand.com</a>までご連絡下さい。</p>
             <p>※このメールは、Brandオンラインショップにてメルマガ配信を許可していただいたお客様にのみ配信されています。</p>
