@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メールマガジン</title>
+    <meta name="description" content="html-mail">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+<!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
+<!-- Style -->
+    <style>
+        .link {
+            color: #1F16C9;
+            border-bottom: 1px solid #1F16C9;
+            transition: .4s ease;
+        }
+        button {
+            display: grid;
+            padding-block:.5em;
+            width: max(10dvw, 200px);
+            background: #C93B16;
+            color: white;
+            text-align: center;
+            letter-spacing: .1em;
+            margin-bottom: 1rem;
+            transition: .4s ease;
+        }
+        @media(any-hover:hover) {
+            button:hover {
+                background: #a62d0f;
+            }
+            .link:hover {
+                color: #4590f3;
+                border-bottom: 1px solid #4590f3;
+            }
+        }
+    </style>
+</head>
+
+<body style="display: grid; justify-items: center; padding-top: 2rem; padding-inline: 1rem; line-height: 1.5;">
+    <div style="display: grid; width: fit-content;">
+        <section>
+            <p style="font-weight: bold;">【Brand】迷ったらこれ！メガネで日常に彩りを。</p>
+            <div style="width: fit-content;">
+                <div style="display: flex; justify-content: space-between;">
+                    <h1 style="font-size: 3rem; font-weight: bold; color: #C93B16; margin-block: 2rem 1rem;">Brand</h1>
+                    <h3 style="font-size: 1rem; font-weight: bold; color: #C93B16; margin-block: 2rem 1rem; align-self: center;">Mail News<span style="display: block;">2023.6.3</span></h3>
+                </div>
+                <img src="images/post1.jpg" alt="今月の新作メガネ" style="width: max(30dvw, 330px)">
+            </div>
+            <p style="margin-block: 3rem 2rem; font-weight: bold;">迷ったらこれ！メガネで日常に彩りを。</p>
+            <a href="リンク" style="width: fit-content; justify-self: center;"><button>詳細はこちら</button></a>
+        </section>
+    
+        <!-- ピックアップ記事 -->
+        <section id="sectionContainer">
+            <h1 style="font-size: 3rem; font-weight: bold; color: #323232; margin-block: 2rem 1rem; border-top: 1px solid #323232; width: 100%; display: inline-block;">PICK UP</h1>
+            <!-- ここに記事が入ります -->
+        </section>
+
+        <section style="margin-block: 2rem;">
+            <p>※このメールは送信専用メールアドレスから配信しておりますので、お問い合わせを頂いてもお答え致しかねます。あらかじめご了承ください。</p>
+            <p>※このメールに心当たりのない場合やご不明な点がある場合は、<a href="リンク" class="link">support@brand.com</a>までご連絡下さい。</p>
+            <p>※このメールは、Brandオンラインショップにてメルマガ配信を許可していただいたお客様にのみ配信されています。</p>
+            <p>【配信元】Brand</p>
+            <p>【URL】<a href="リンク" class="link">https://www.brand.example.com</a></p>
+            <p>【採用情報】<a href="リンク" class="link">https://www.brand.example.com</a></p>
+            <p>【MAIL】<a href="リンク" class="link">support@example.com</a></p>
+            <p>【ADDRESS】〒012-3456 広島県尾道市1-2 堀田ビル3F Brandオンラインショップ</p>
+            <p>【TEL】0120-393-393 (受付時間：10:00-17:00 ※土日祝日、年末年始をのぞく)</p>
+        </section>
+    </div>
+
+<!-- Script -->
+    <script>
+        'use strict';
+
+        const sections = [
+            {
+                title: 'WEB限定アウトレット',
+                content: 'シンプル&ベーシック！おしゃれなアイテム続々登場！',
+                img: 'images/post2.jpg',
+                link: 'リンク'
+            },
+            {
+                title: 'WEB限定アウトレット',
+                content: 'シンプル&ベーシック！おしゃれなアイテム続々登場！',
+                img: 'images/post2.jpg',
+                link: 'リンク'
+            },
+            {
+                title: 'WEB限定アウトレット',
+                content: 'シンプル&ベーシック！おしゃれなアイテム続々登場！',
+                img: 'images/post2.jpg',
+                link: 'リンク'
+            },
+            {
+                title: 'WEB限定アウトレット',
+                content: 'シンプル&ベーシック！おしゃれなアイテム続々登場！',
+                img: 'images/post2.jpg',
+                link: 'リンク'
+            },
+        ];
+
+        const sectionContainer = document.querySelector('#sectionContainer')
+    
+        sections.forEach(section => {
+            const code = `
+            <section style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                <img src="${section.img}" alt="" style="width: max(10dvw, 120px); height: 100%;">
+                <div>
+                    <h2 style="font-size: max(1.5dvw, 1rem); font-weight: bold; color: #C93B16; margin-bottom: 1rem;">${section.title}</h2>
+                    <p style="margin-bottom: 1rem;">${section.content}</p>
+                    <a href="${section.link}" style="width: fit-content; justify-self: center;"><button>詳細はこちら</button></a>
+                </div>
+            </section>
+            `;
+
+            sectionContainer.innerHTML += code;
+        });
+
+    </script>
+</body>
+</html>
